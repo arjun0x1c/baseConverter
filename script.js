@@ -82,6 +82,7 @@ const RESULT = _("result");
 const BASE2 = _("option2");
 
 function check() {
+    placeholder();
     if(!validation(VALUE.value, BASE.value)){
         ERROR_BOX.innerHTML = "Invalid Input For this base."
     }
@@ -90,6 +91,12 @@ function check() {
     }
 }
 
+function placeholder() {
+    let base = BASE.VALUE;
+    if (base === 2) {
+        VALUE.placeholder = "100101";
+    }
+}
 function main() {
     RESULT.innerHTML = VALUE.value != 0 ? decimalConverter(baseToDecimal(VALUE.value, +BASE.value), +BASE2.value) : 0;
 }

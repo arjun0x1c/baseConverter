@@ -4,32 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <h5>Base Converter</h5>
     <section>
-        <h5>Base Converter</h5>
         <div>
-
             <p id="error-msg" style="color: red;"></p>
+            <label for="value">Enter your number</label>
             <input type="text" name="value" id="value" oninput="check()">
-            <select name="base" id="option1" onchange="check()">
-                <option value="2">Binary (2) </option>
-                <option value="8">Octal (8)</option>
-                <option value="10" selected>Decimal (10)</option>
-                <option value="16">Hexadecimal (16)</option>
-            </select>
-
-            <select name="base" id="option2">
-                <option value="2" selected>Binary (2)</option>
-                <option value="8">Octal (8)</option>
-                <option value="10">Decimal (10)</option>
-                <option value="16">Hexadecimal (16)</option>
-            </select>
-
-            <input type="button" value="Calculate" onclick="main()">
+            <div class="option">
+                <select name="base" id="option1" onchange="check()">
+                    <option value="2">Binary (2) </option>
+                    <option value="8">Octal (8)</option>
+                    <option value="10" selected>Decimal (10)</option>
+                    <option value="16">Hexadecimal (16)</option>
+                </select>
+                <i class='fas fa-angle-double-right'></i>
+                <select name="base" id="option2">
+                    <option value="2" selected>Binary (2)</option>
+                    <option value="8">Octal (8)</option>
+                    <option value="10">Decimal (10)</option>
+                    <option value="16">Hexadecimal (16)</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button value="Clear" class="clear-btn">Clear <i class="fas fa-trash"></i></button>
+                <button value="Calculate" onclick="main()" class="calculate-btn">Calculate <i class="fa-solid fa-calculator"></i></button>
+            </div>
+            <h5 class="result-area">Converted number</h5>
             <p id="result"></p>
         </div>
     </section>
 </body>
 <script src="script.js"></script>
+<script src="https://kit.fontawesome.com/38d6e9bf1b.js" crossorigin="anonymous"></script>
 </html>
