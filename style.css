@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -10,15 +11,21 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    background-color: antiquewhite;
+}
+
+body > h5 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
 section {
+    background-color: #fff;
     border: 1px solid;
     border-radius: 5px;
-    box-shadow: 10px 20px 8px #444;
+    box-shadow: 10px 20px 20px #444;
     width: 350px;
     padding: 1rem;
-    margin: auto;
 }
 
 input[type=text] {
@@ -65,23 +72,23 @@ select {
 
 .clear-btn {
     padding: 0.5rem 2rem;
-    /* margin-right: 3rem; */
     background-color: red;
     font-size: 1.2rem;
-    /* text-transform: uppercase; */
     border: none;
     border-radius: 5px;
     color: #fff;
+    width: 49%;
 }
 
 .calculate-btn {
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     background-color: rgb(49, 164, 213);
     border: none;
     font-size: 1.2rem;
     /* text-transform: uppercase; */
     border-radius: 5px;
     color: #fff;
+    width: 49%;
 }
 
 #result {
@@ -90,6 +97,7 @@ select {
     background-color: #444444c4;
     color: #fff;
     border-radius: 5px;
+    overflow: scroll;
 }
 
 .result-area {
@@ -97,4 +105,8 @@ select {
     font-size: 1.1rem;
     color: grey;
     margin-bottom: 1rem;
+}
+
+#error-msg {
+    text-align: center;
 }
